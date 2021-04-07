@@ -22,6 +22,7 @@ class CovidRecyclerViewAdapter():
     override fun onBindViewHolder(holder: CovidViewHolder, position: Int) {
         val item = data[position]
         holder.bindView(item)
+        //Se aplica la interfaz entregada en este caso por la MainActivity
         holder.itemView.setOnClickListener {
             onClickListener.onClickItem(item)
         }

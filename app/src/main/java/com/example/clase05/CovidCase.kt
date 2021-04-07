@@ -21,7 +21,6 @@ data class CovidCase (
         val hospitalized : Int,
         val totalTestResults : Int,
         val lastModified : String,
-        val recovered : String,
         val total : Int,
         val posNeg : Int,
         val deathIncrease : Int,

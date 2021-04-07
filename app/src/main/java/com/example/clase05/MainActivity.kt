@@ -38,10 +38,10 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     override fun onClickItem(item: Any) {
         if(item is CovidCase){
-            val intent = Intent(this, CovidCaseDetail::class.java).apply{
-                val case = item as CovidCase
-                extras?.putParcelable("case",case)
-            }
+            val intent = Intent(this, CovidCaseDetail::class.java)
+            val case = item as CovidCase
+            //Esta es la forma correcta de pasar data por el intent. Lo que se vio en clase puede ser dependiendo del tipo
+            intent.putExtra("covidCase",case)
             this.startActivity(intent)
         }
     }
